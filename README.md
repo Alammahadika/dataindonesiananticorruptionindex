@@ -59,3 +59,10 @@ ggplot(anticorruptbehaviorbyregion, aes(x = Years, y = Index, group = Regions, c
   scale_x_continuous(breaks = seq(2012, 2024, by = 1)) +
   scale_color_manual(values = c("Urban" = "blue", "Rural" = "red"))
 ```
+![Indonesian Anti Corruption Behaviors Index](./datavisual/IACB.png)
+
+### General Analysis Indonesian Anti Corruption Behaviors Index by Region 2012-2024
+
+Increased National Awareness, Despite fluctuations in rural areas, both regions showed an overall increase from 2012 to 2024. This may reflect the government or related institutions' continuous efforts to strengthen anti-corruption programs across the country.
+Challenges in Rural Areas, For rural areas, despite an increase after 2020, challenges seen from previous data fluctuations indicate that there are areas that still need more attention, especially in terms of law enforcement and public awareness.
+
