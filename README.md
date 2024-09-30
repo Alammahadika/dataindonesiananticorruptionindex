@@ -3,3 +3,10 @@ From the R Language Programmer, this project produces visual development data fo
 
 ## [Anti-Corruption Index (IPA) Indonesia by Regions 2012-2024](https://www.bps.go.id/id/statistics-table?subject=526)
 
+### Read Data Base 
+```r{}
+
+
+```
+
+
