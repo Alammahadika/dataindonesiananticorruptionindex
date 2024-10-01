@@ -200,4 +200,4 @@ ggplot(behaviorsbydimension, aes(x = Years, y = Index, fill = Dimension)) +
   theme(plot.title = element_text(face = "bold"))
 
 ```
-
+![Indonesia Anti-Corruption Index](datavisual/ipakbydimension2012-2024.png)
