@@ -201,3 +201,7 @@ ggplot(behaviorsbydimension, aes(x = Years, y = Index, fill = Dimension)) +
 
 ```
 ![Indonesia Anti-Corruption Index](datavisual/ipakbydimension2012-2024.png)
+
+### Perception vs Experience Behaviors
+In 2024, the perception and experience indexes are seen to decline slightly, although low. This may be a challenge in maintaining the momentum of anti-corruption behavior development from previous years.
+Overall, the picture of anti-corruption behavior in Indonesia, both in terms of experience and perception, has indeed increased significantly since 2012, first from 2017 to 2023. However, there are still challenges to the perception index which is very low compared to what has been experienced in recent years. Public perceptions of corruption may not all show changes.
