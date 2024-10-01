@@ -143,3 +143,61 @@ ggplot(ipakbyage, aes(x = Years, y = Index, group = Age, color = Age)) +
 ### Interpreting Changes in the Anti-Corruption Behavior Index Values ​​by Age
 Each line represents a different age group, and you can see how the anti-corruption index has evolved over the years for each age group: Interim ResultsYounger age groups (<40) Are more susceptible to declines in anti-corruption behavior. This could indicate that the younger generation needs more attention in anti-corruption campaigns or education.Middle age groups (40-50) and the elderly (>60) Are more stable and have an upward trend in anti-corruption behavior. This could indicate that the older generation may have a stronger understanding or involvement in anti-corruption behavior.
 
+## [Anti Corruption Behaviors by Social Dimension 2012-2024](https://www.bps.go.id/id/statistics-table/2/NjM1IzI=/indeks-perilaku-anti-korupsi--ipak--menurut-dimensi.html)
+
+### Read Data Base 
+```r{}
+library(readxl)
+behaviorsbydimension <- read_excel("~/Desktop/Data Github/behaviorsbydimension.xlsx")
+View(behaviorsbydimension)
+
+library(knitr)
+behaviorsbydimension <-kable(behaviorsbydimension, format = "markdown") 
+print(behaviorsbydimension)
+
+```
+|Dimension  | Index| Years|
+|:----------|-----:|-----:|
+|Perseption |  3.54|  2012|
+|Perseption |  3.66|  2013|
+|Perseption |  3.71|  2014|
+|Perseption |  3.73|  2015|
+|Perseption |  3.81|  2017|
+|Perseption |  3.86|  2018|
+|Perseption |  3.80|  2019|
+|Perseption |  3.68|  2020|
+|Perseption |  3.83|  2021|
+|Perseption |  3.80|  2022|
+|Perseption |  3.82|  2023|
+|Perseption |  3.76|  2024|
+|Experience |  3.58|  2012|
+|Experience |  3.58|  2013|
+|Experience |  3.49|  2014|
+|Experience |  3.39|  2015|
+|Experience |  3.60|  2017|
+|Experience |  3.57|  2018|
+|Experience |  3.65|  2019|
+|Experience |  3.91|  2020|
+|Experience |  3.90|  2021|
+|Experience |  3.99|  2022|
+|Experience |  3.96|  2023|
+|Experience |  3.89|  2024|
+
+### Indonesian Anti-Corruption Behaviors Index by Dimension 2012-2024
+```r{}
+library(ggplot2)
+ggplot(behaviorsbydimension, aes(x = Years, y = Index, fill = Dimension)) +
+  geom_col(position = "stack") +
+  geom_text(aes(label = round(Index, 2)), 
+            position = position_stack(vjust = 0.5)) +
+  scale_fill_manual(values = c("skyblue", "blue")) +
+  theme_bw() +
+  scale_x_continuous(breaks = seq(2012, 2024, by = 1)) +
+  scale_y_continuous(breaks = NULL) +
+  labs(x = "Years", y = "Index", 
+       title = "Indonesian Anti-Corruption Behaviors by Dimension 2012-2024",
+       subtitle = "Source: Sentral Statistic Agency") +
+  theme(plot.title = element_text(face = "bold"))
+
+```
+
