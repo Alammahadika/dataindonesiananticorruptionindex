@@ -4,7 +4,7 @@ From the R Language Programmer, this project produces visual development data fo
 ## [Anti-Corruption Index (IPA) Indonesia by Regions 2012-2024](https://www.bps.go.id/id/statistics-table?subject=526)
 
 ### Read Data Base 
-```r{}
+```r
 library(readxl)
 anticorruptbehaviorbyregion <- read_excel("~/Desktop/Data Github/anticorruptbehaviorbyregion.xlsx")
 View(anticorruptbehaviorbyregion)
@@ -43,7 +43,7 @@ print(anticorruptbehaviorbyregion)
 |Rural   |  3.83|  2024|
 
 ### Indonesian Anti Corruption Behaviors Index by Province 2012-2024 
-```r{}
+```r
 library(ggplot2)
 ggplot(anticorruptbehaviorbyregion, aes(x = Years, y = Index, group = Regions, color = Regions)) +
   geom_line(size = 0.2, alpha = 0.8)+
@@ -69,7 +69,7 @@ Challenges in Rural Areas, For rural areas, despite an increase after 2020, chal
 ## [Indonesian Anti - Corruption Behaviors by Ages 2014-2024 ](https://www.bps.go.id/id/statistics-table/2/MTQ5OSMy/indeks-perilaku-anti-korupsi--ipak--menurut-kelompok-umur.html)
 
 ### Read Data Base
-```r{}
+```r
 library(readxl)
 ipakbyage <- read_excel("~/Desktop/Data Github/ipakbyage.xlsx")
 
@@ -120,7 +120,7 @@ print(ipakbyage)
 
 ### Analysis Indonesian Anti-Corruption Index by Ages 2012-2024 
 
-```r{}
+```r
 library(ggplot2)
 ggplot(ipakbyage, aes(x = Years, y = Index, group = Age, color = Age)) +
   geom_line(size = 0.5, alpha = 0.8) +
@@ -146,7 +146,7 @@ Each line represents a different age group, and you can see how the anti-corrupt
 ## [Anti Corruption Behaviors by Social Dimension 2012-2024](https://www.bps.go.id/id/statistics-table/2/NjM1IzI=/indeks-perilaku-anti-korupsi--ipak--menurut-dimensi.html)
 
 ### Read Data Base 
-```r{}
+```r
 library(readxl)
 behaviorsbydimension <- read_excel("~/Desktop/Data Github/behaviorsbydimension.xlsx")
 View(behaviorsbydimension)
@@ -184,7 +184,7 @@ print(behaviorsbydimension)
 |Experience |  3.89|  2024|
 
 ### Indonesian Anti-Corruption Behaviors Index by Dimension 2012-2024
-```r{}
+```r
 library(ggplot2)
 ggplot(behaviorsbydimension, aes(x = Years, y = Index, fill = Dimension)) +
   geom_col(position = "stack") +
